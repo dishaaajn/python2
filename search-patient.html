@@ -44,8 +44,8 @@
     </nav>
 
     <div class="container-fluid p-5">
-        <h3>Add Patient</h3>
-        <form action="/add-patient" method="POST">
+        <h3>Search Patient</h3>
+        <form action="/search-patient-in-db" method="POST">
             <div class="mb-3 mt-3">
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
@@ -54,31 +54,8 @@
             <div class="mb-3 mt-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-            </div>
-
-            <div class="mb-3">
-                <label for="age" class="form-label">Age:</label>
-                <input type="number" class="form-control" id="age" placeholder="Enter age" name="age">
-            </div>
-
-            <div class="mb-3">
-                <label for="address" class="form-label">Address:</label>
-                <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
-            </div>
-
-            <label class="form-label">Select Gender :</label>
-
-            <div class="form-check">
-                <input type="radio" class="form-check-input" id="radio1" name="gender" value="female" checked>Female
-                <label class="form-check-label" for="radio1"></label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" id="radio2" name="gender" value="male">Male
-                <label class="form-check-label" for="radio2"></label>
-            </div>
-
-            <br>
-            <button type="submit" class="btn btn-primary">Add</button>
+            </div>           
+            <button type="submit" class="btn btn-primary">Search</button>
 
 
         </form>

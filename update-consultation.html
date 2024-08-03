@@ -44,41 +44,45 @@
     </nav>
 
     <div class="container-fluid p-5">
-        <h3>Add Patient</h3>
-        <form action="/add-patient" method="POST">
+        <h3>Update Consultation</h3>
+        <form action="/update-consultation-in-db/{{consultation['_id']}}" method="POST">
             <div class="mb-3 mt-3">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                <label for="complaints" class="form-label">Chief Complaints:</label>
+                <input type="text" class="form-control" id="complaints" placeholder="Enter complaints" name="complaints" value = "{{consultation['complaints']}}">
             </div>
 
             <div class="mb-3 mt-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                <label for="bp" class="form-label">Blood Pressure:</label>
+                <input type="text" class="form-control" id="bp" placeholder="Enter Blood Pressure" name="bp"  value = "{{consultation['bp']}}">
             </div>
 
             <div class="mb-3">
-                <label for="age" class="form-label">Age:</label>
-                <input type="number" class="form-control" id="age" placeholder="Enter age" name="age">
+                <label for="temp" class="form-label">Temperature:</label>
+                <input type="text" class="form-control" id="temp" placeholder="Enter Temperature" name="temp"  value = "{{consultation['temp']}}">
             </div>
 
             <div class="mb-3">
-                <label for="address" class="form-label">Address:</label>
-                <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
+                <label for="Sugar" class="form-label">Sugar:</label>
+                <input type="text" class="form-control" id="sugar" placeholder="Enter Sugar" name="sugar"  value = "{{consultation['sugar']}}">
             </div>
 
-            <label class="form-label">Select Gender :</label>
-
-            <div class="form-check">
-                <input type="radio" class="form-check-input" id="radio1" name="gender" value="female" checked>Female
-                <label class="form-check-label" for="radio1"></label>
+            <div class="mb-3">
+                <label for="medicines" class="form-label">Medicines:</label>
+                <input type="text" class="form-control" id="medicines" placeholder="Enter Medicines" name="medicines"  value = "{{consultation['medicines']}}">
             </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" id="radio2" name="gender" value="male">Male
-                <label class="form-check-label" for="radio2"></label>
+
+            <div class="mb-3">
+                <label for="remarks" class="form-label">Remarks:</label>
+                <input type="text" class="form-control" id="remarks" placeholder="Enter Remarks" name="remarks"  value = "{{consultation['remarks']}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="remarks" class="form-label">Next Follow Up:</label>
+                <input type="date" class="form-control" id="followup" placeholder="Enter Next Follow Up" name="followup"  value = "{{consultation['Next_Follow_Up']}}">
             </div>
 
             <br>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-primary">Update Consulation</button>
 
 
         </form>
